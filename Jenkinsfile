@@ -27,6 +27,15 @@ pipeline
                 deploy adapters: [tomcat9(credentialsId: 'none', path: '', url: 'http://54.81.238.2:8080/')], contextPath: 't', war: '**/*.war'
             }
         }
+        
+        stage('test')
+        {
+            steps()
+            {
+                git 'https://github.com/Kollurdilip98/Testing-Code.git'
+            }
+        }
+        
            
          
     }
