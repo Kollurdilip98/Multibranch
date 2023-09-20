@@ -33,6 +33,7 @@ pipeline
             steps()
             {
                 git 'https://github.com/Kollurdilip98/Testing-Code.git'
+            sh 'java -jar  /var/lib/jenkins/workspace/Declarative/testing.jar'
             }
         }
         
