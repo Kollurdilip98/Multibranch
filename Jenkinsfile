@@ -28,22 +28,6 @@ pipeline
             
             }
         }  
-         stage('continous testing')
-        {
-            steps()
-            {
-             git 'https://github.com/Kollurdilip98/Testing-Code.git'
-             sh 'java -jar /var/lib/jenkins/workspace/Declarative@2/testing.jar'
-            }   
-        }
-          stage('continous delivery')
-        {
-            
-            steps()
-            {
-               deploy adapters: [tomcat9(credentialsId: 'none', path: '', url: 'http://54.196.249.132:8080')], contextPath: 'prod', war: '**/*.war'
-              
-            }   
-        }
+         
     }
 }  
