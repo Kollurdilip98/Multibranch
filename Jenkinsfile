@@ -40,6 +40,7 @@ pipeline
         {
             steps()
             {
+                input message: 'approval', submitter: 'dilip'
                deploy adapters: [tomcat9(credentialsId: 'none', path: '', url: 'http://54.226.130.150:8080')], contextPath: 'p', war: '**/*.war'
             }
         }
