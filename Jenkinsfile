@@ -1,11 +1,14 @@
-node('built-in')
+pipeline
 {
-    stage('cd')
+    agent any
+    stages()
     {
-  git 'https://github.com/Kollurdilip98/Developer-Code.git'
-}
-stage('cb')
-{
-sh 'mvn package'
-}
+        stage('cb')
+        {
+            steps()
+            {
+                git 'https://github.com/Kollurdilip98/Testing-Code.git'
+            }
+        }
+    }
 }
