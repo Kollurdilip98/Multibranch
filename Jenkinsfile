@@ -2,7 +2,14 @@ node('built-in')
 {
   stage('cd')
   {
+    try
+    {
     git 'https://github.com/Kollurdilip98/Developer-Code.git'
+    }
+    catch (Exception e1)
+    {
+      
+    }
   }
   stage('cb')
   {
