@@ -8,7 +8,7 @@ node('built-in')
     }
     catch (Exception e1)
     {
-      
+      mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: '', to: 'dilipk341zhb@gmail.com'
     }
   }
   stage('cb')
